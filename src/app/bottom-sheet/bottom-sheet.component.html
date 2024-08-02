@@ -1,0 +1,33 @@
+<!-- src/app/bottom-sheet/bottom-sheet.component.html -->
+<div class="bottom-sheet-container">
+  <ng-container [ngSwitch]="data.panel">
+    <div *ngSwitchCase="'projects'" class="panel-content">
+      <h2>Projects</h2>
+      <div class="projects-container">
+        <div *ngFor="let project of projects" class="project-item">
+          <img [src]="project.image" alt="{{ project.name }}" class="project-image" />
+          <div class="project-details">
+            <h3>{{ project.name }}</h3>
+            <p>{{ project.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngSwitchCase="'videos'" class="panel-content">
+      <h2>Videos</h2>
+      <div class="videos-container">
+        <div *ngFor="let video of videos" class="video-item">
+          <img [src]="video.thumbnail" alt="{{ video.title }}" class="video-thumbnail" />
+          <div class="video-details">
+            <h3>{{ video.title }}</h3>
+            <p>{{ video.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngSwitchCase="'about'" class="panel-content">
+      <h2>About Me</h2>
+      <p>{{ aboutMe }}</p>
+    </div>
+  </ng-container>
+</div>

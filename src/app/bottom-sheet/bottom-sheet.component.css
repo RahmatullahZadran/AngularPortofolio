@@ -1,0 +1,61 @@
+/* src/app/bottom-sheet/bottom-sheet.component.css */
+.bottom-sheet-container {
+  padding: 20px;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  height: 100%;
+  overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+.panel-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%; /* Allow content to be responsive */
+  margin: 0 auto; /* Center the content */
+}
+
+h2 {
+  color: #ff4081;
+}
+
+.project-item, .video-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  width: 100%; /* Full width of the parent container */
+  max-width: 600px; /* Limit the width of items */
+}
+
+.project-image, .video-thumbnail {
+  width: 100px; /* Adjust as needed */
+  height: 100px; /* Adjust as needed */
+  object-fit: cover;
+  margin-right: 16px;
+}
+
+.project-details, .video-details {
+  flex: 1;
+}
+
+.project-item h3, .video-item h3 {
+  margin: 0;
+}
+
+.project-item p, .video-item p {
+  margin: 0;
+}
+
+button.mat-bottom-sheet-close {
+  margin-top: 20px;
+  background-color: #ff4081;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.mat-bottom-sheet-close:hover {
+  background-color: #e040fb; /* Slightly darker on hover */
+}
